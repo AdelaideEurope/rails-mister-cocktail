@@ -1,8 +1,18 @@
+<nav class="navbar">
+    <%= link_to root_path do %>
+    <%= image_tag "https://i.ya-webdesign.com/images/cocktails-clipart-cosmo-drink-4.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%><span class="sec counter counter-lg"><i class="fas fa-undo"></i></span>
+  <% end %>
+    <%= link_to new_cocktail_path do %>
+    <%= image_tag "https://i.ya-webdesign.com/images/cocktails-clipart-cosmo-drink-4.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%><span class="sec counter counter-lg">+</span>
+  <% end %>
+</nav>
+
 <div class="container">
 <h1>Add a cocktail</h1>
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
-  <%= f.input :img_url, :label => "Image URL" %>
+<!--   <%= f.input :img_url, :label => "Image URL" %> -->
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Add cocktail", class: "btn btn-primary" %>
 <% end %>
 </div>

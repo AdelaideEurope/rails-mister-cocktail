@@ -1,15 +1,14 @@
 <div class="banner-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://vineyardclubw.blob.core.windows.net/images/DSC_0028%20copy%20copy.jpg);">
 </div>
 
-<nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand pl-2">
-        <%= image_tag "https://image.flaticon.com/icons/png/512/38/38706.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%>
-      </a>
-      <a class="navbar-brand pr-2"><%= link_to new_cocktail_path do %>
-        <%= image_tag "https://image.flaticon.com/icons/png/512/38/38706.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%><span class="sec counter counter-lg">+</span>
-      <% end %>
-      </a>
-    </nav>
+<nav class="navbar">
+    <%= link_to root_path do %>
+    <%= image_tag "https://i.ya-webdesign.com/images/cocktails-clipart-cosmo-drink-4.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%><span class="sec counter counter-lg"><i class="fas fa-undo"></i></span>
+  <% end %>
+    <%= link_to new_cocktail_path do %>
+    <%= image_tag "https://i.ya-webdesign.com/images/cocktails-clipart-cosmo-drink-4.png", :class => "d-inline-block align-top", :width => "30", :height => "30"%><span class="sec counter counter-lg">+</span>
+  <% end %>
+</nav>
 
 <div class="container">
   <h4>Add an ingredient</h4>
