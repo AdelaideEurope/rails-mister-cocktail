@@ -1,0 +1,11 @@
+.square {
+    float:left;
+    position: relative;
+    width: 16%;
+    padding-bottom : 12%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-color:black; /* you change this to "contain" if you don't want the images to be cropped */
+    color: $charcoal;
+    text-align: center;
+    vertical-align: middle;
+}
