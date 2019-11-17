@@ -14,41 +14,15 @@
 
 <div class="container">
 
-
-
-  <h4>Ingredients</h4>
-  <ul>
+<h4>Ingredients</h4>
+<div class="container">
+  <div class="row">
     <% @cocktail.doses.each do |dose|%>
-    <li><%= dose.description %> - <%= dose.ingredient[:name].downcase %> <%= link_to "❌", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+        <div class="card-category col-sm" >
+          <%= link_to "x", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, :class => "delete-cross" %>
+          <%= dose.description %> <br> <%= dose.ingredient[:name].downcase %>
+        </div>
     <% end %>
-  </ul>
-  <p><%= link_to "Back to list", root_path %> | <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></p>
+  </div>
 </div>
-
-
-
-<!--
-<div class="wrapper">
-    <ul class="icon-list js-icon-list">
-      <li class="js-icon-item" data-name="octicon-alert">
-        1
-      </li>
-
-      <li class="js-icon-item" data-name="octicon-alert">
-        1
-      </li>
-
-      <li class="js-icon-item" data-name="octicon-alert">
-        1
-      </li>
-
-      <li class="js-icon-item" data-name="octicon-alert">
-        1
-      </li>
-
-      <li class="js-icon-item" data-name="octicon-alert">
-        1
-      </li>
-    </ul>
 </div>
- -->

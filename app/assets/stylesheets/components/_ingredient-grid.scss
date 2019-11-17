@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.card-category {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  border-radius: 2px;
+  border: solid 1px #EC4392;
+  margin: 40px;
+}
+
+.delete-cross {
+  position: absolute ;
+  top: 0px;
+  right: 10px;
+}
